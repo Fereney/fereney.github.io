@@ -1,0 +1,242 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+    />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Dune Master v1.0</title>
+    <link
+      rel="stylesheet"
+      href="fonts/roboto/stylesheet.css"
+      type="text/css"
+    />
+    <link rel="stylesheet" href="css/index.css" />
+  </head>
+  <body>
+    <header class="header">
+      <logo class="header__logo logo">
+        <img src="./images/dune_logo.png" alt="">
+      </logo>
+    </header>
+    <main class="main">
+      <div class="map__container">
+        <div class="map__canvas"></div>
+      </div>
+      
+      <div class="map__controls">
+        <div class="map__controlsPart map__controlsPart_modes">
+          <label class="map__controlsPartLabel">Режим:</label>
+          <button class="map__button map__mode_move">Перемещение</button>
+          <button class="map__button map__mode_icon">Маркер</button>
+          <button class="map__button map__mode_edit">Свой маркер</button>
+          <button class="map__button map__mode_delete">Удаление</button>
+        </div>
+        <div class="map__controlsPart map__controlsPart_icons">
+          <label class="map__controlsPartLabel">Выберите иконку:</label>
+          <div class="map__iconsRow">
+            <div class="map__iconsRowTitle">Активности:</div>
+
+            <button class="map__iconPicker" data-icon="Cave" title="Cave">
+              <img src="images/icons/common/Cave.svg" alt="Cave" />
+              <span>Пещера</span>
+            </button>
+
+            <button class="map__iconPicker" data-icon="HomeBase" title="HomeBase">
+              <img src="images/icons/common/HomeBase.svg" alt="HomeBase" />
+              <span>База</span>
+            </button>
+
+            <button class="map__iconPicker" data-icon="Proxy" title="Proxy">
+              <img src="images/icons/common/Proxy.svg" alt="Proxy" />
+              <span>Прокси</span>
+            </button>
+
+            <button class="map__iconPicker" data-icon="Shipwreck" title="Shipwreck">
+              <img src="images/icons/common/Shipwreck.svg" alt="Shipwreck" />
+              <span>Корабль</span>
+            </button>
+
+            <button class="map__iconPicker" data-icon="ShipwreckX2" title="ShipwreckX2">
+              <img src="images/icons/common/ShipwreckX2.svg" alt="ShipwreckX2" />
+              <span>Шаттл</span>
+            </button>
+
+            <button class="map__iconPicker" data-icon="Stravidium" title="Stravidium">
+              <img src="images/icons/common/Stravidium.svg" alt="Stravidium" />
+              <span>Стравидиум</span>
+            </button>
+
+            <button class="map__iconPicker" data-icon="Titanium" title="Titanium">
+              <img src="images/icons/common/Titanium.svg" alt="Titanium" />
+              <span>Титан</span>
+            </button>
+
+            <button class="map__iconPicker" data-icon="TestingStation" title="TestingStation">
+              <img src="images/icons/common/TestingStation.svg" alt="TestingStation" />
+              <span>Лаба</span>
+            </button>
+
+            <button class="map__iconPicker" data-icon="Spice1" title="Spice1">
+              <img src="images/icons/common/Spice1.svg" alt="Spice1" />
+              <span>Спайс-S</span>
+            </button>
+
+            <button class="map__iconPicker" data-icon="Spice2" title="Spice2">
+              <img src="images/icons/common/Spice2.svg" alt="Spice2" />
+              <span>Спайс-M</span>
+            </button>
+
+            <button class="map__iconPicker" data-icon="Spice3" title="Spice3">
+              <img src="images/icons/common/Spice3.svg" alt="Spice3" />
+              <span>Ринг</span>
+            </button>
+          </div>
+
+          <div class="map__iconsRow">
+            <div class="map__iconsRowTitle">Дома:</div>
+
+            <button class="map__iconPicker" data-icon="House_Alexin" title="House_Alexin">
+              <img src="images/icons/houses/House_Alexin.svg" alt="House_Alexin" />
+              <span>Алексин</span>
+            </button>
+            
+            <button class="map__iconPicker" data-icon="House_Argpsaz" title="House_Argpsaz">
+              <img src="images/icons/houses/House_Argpsaz.svg" alt="House_Argpsaz" />
+              <span>Аргосаз</span>
+            </button>
+
+            <button class="map__iconPicker" data-icon="House_Dyvetz" title="House_Dyvetz">
+              <img src="images/icons/houses/House_Dyvetz.svg" alt="House_Dyvetz" />
+              <span>Диветц</span>
+            </button>
+
+            <button class="map__iconPicker" data-icon="House_Ecaz" title="House_Ecaz">
+              <img src="images/icons/houses/House_Ecaz.svg" alt="House_Ecaz" />
+              <span>Эказ</span>
+            </button>
+
+            <button class="map__iconPicker" data-icon="House_Hagal" title="House_Hagal">
+              <img src="images/icons/houses/House_Hagal.svg" alt="House_Hagal" />
+              <span>Хагаль</span>
+            </button>
+
+            <button class="map__iconPicker" data-icon="House_Hurata" title="House_Hurata">
+              <img src="images/icons/houses/House_Hurata.svg" alt="House_Hurata" />
+              <span>Хурата</span>
+            </button>
+
+            <button class="map__iconPicker" data-icon="House_Imota" title="House_Imota">
+              <img src="images/icons/houses/House_Imota.svg" alt="House_Imota" />
+              <span>Имота</span>
+            </button>
+
+            <button class="map__iconPicker" data-icon="House_Kenola" title="House_Kenola">
+              <img src="images/icons/houses/House_Kenola.svg" alt="House_Kenola" />
+              <span>Кенола</span>
+            </button>
+
+            <button class="map__iconPicker" data-icon="House_Lindaren" title="House_Lindaren">
+              <img src="images/icons/houses/House_Lindaren.svg" alt="House_Lindaren" />
+              <span>Линдарен</span>
+            </button>
+
+            <button class="map__iconPicker" data-icon="House_Maros" title="House_Maros">
+              <img src="images/icons/houses/House_Maros.svg" alt="House_Maros" />
+              <span>Марош</span>
+            </button>
+
+            <button class="map__iconPicker" data-icon="House_Mikarrol" title="House_Mikarrol">
+              <img src="images/icons/houses/House_Mikarrol.svg" alt="House_Mikarrol" />
+              <span>Микаррол</span>
+            </button>
+
+            <button class="map__iconPicker" data-icon="House_Moritani" title="House_Moritani">
+              <img src="images/icons/houses/House_Moritani.svg" alt="House_Moritani" />
+              <span>Моритани</span>
+            </button>
+
+            <button class="map__iconPicker" data-icon="House_Mutelli" title="House_Mutelli">
+              <img src="images/icons/houses/House_Mutelli.svg" alt="House_Mutelli" />
+              <span>Мутелли</span>
+            </button>
+
+            <button class="map__iconPicker" data-icon="House_Novebruns" title="House_Novebruns">
+              <img src="images/icons/houses/House_Novebruns.svg" alt="House_Novebruns" />
+              <span>Новебрун</span>
+            </button>
+
+            <button class="map__iconPicker" data-icon="House_Richese" title="House_Richese">
+              <img src="images/icons/houses/House_Richese.svg" alt="House_Richese" />
+              <span>Ричеза</span>
+            </button>
+
+            <button class="map__iconPicker" data-icon="House_Sor" title="House_Sor">
+              <img src="images/icons/houses/House_Sor.svg" alt="House_Sor" />
+              <span>Сор</span>
+            </button>
+
+            <button class="map__iconPicker" data-icon="House_Spinnette" title="House_Spinnette">
+              <img src="images/icons/houses/House_Spinnette.svg" alt="House_Spinnette" />
+              <span>Спинетт</span>
+            </button>
+
+            <button class="map__iconPicker" data-icon="House_Taligari" title="House_Taligari">
+              <img src="images/icons/houses/House_Taligari.svg" alt="House_Taligari" />
+              <span>Талигари</span>
+            </button>
+
+            <button class="map__iconPicker" data-icon="House_Thorvald" title="House_Thorvald">
+              <img src="images/icons/houses/House_Thorvald.svg" alt="House_Thorvald" />
+              <span>Торвальд</span>
+            </button>
+
+            <button class="map__iconPicker" data-icon="House_Tseida" title="House_Tseida">
+              <img src="images/icons/houses/House_Tseida.svg" alt="House_Tseida" />
+              <span>Цейда</span>
+            </button>
+
+            <button class="map__iconPicker" data-icon="House_Varota" title="House_Varota">
+              <img src="images/icons/houses/House_Varota.svg" alt="House_Varota" />
+              <span>Варота</span>
+            </button>
+
+            <button class="map__iconPicker" data-icon="House_Vernius" title="House_Vernius">
+              <img src="images/icons/houses/House_Vernius.svg" alt="House_Vernius" />
+              <span>Верниус</span>
+            </button>
+
+            <button class="map__iconPicker" data-icon="House_Wallach" title="House_Wallach">
+              <img src="images/icons/houses/House_Wallach.svg" alt="House_Wallach" />
+              <span>Валлах</span>
+            </button>
+
+            <button class="map__iconPicker" data-icon="House_Wayku" title="House_Wayku">
+              <img src="images/icons/houses/House_Wayku.svg" alt="House_Wayku" />
+              <span>Вайку</span>
+            </button>
+
+            <button class="map__iconPicker" data-icon="House_Wydras" title="House_Wydras">
+              <img src="images/icons/houses/House_Wydras.svg" alt="House_Wydras" />
+              <span>Уайдрас</span>
+            </button>
+          </div>
+        </div>
+        <div class="map__controlsPart">
+          <div class="map__modeStatus"></div>
+        </div>
+        <div class="map__controlsPart">
+          <button class="map__shareLink">Создать ссылку</button>
+          <input type="text" class="map__shareField" readonly />
+        </div>
+      </div>
+    </main>
+    <footer class="footer">
+      Dementia and Courage &copy; 2025
+    </footer>
+    <div class="bg"></div>
+    <script src="js/index.js"></script>
+  </body>
+</html>
