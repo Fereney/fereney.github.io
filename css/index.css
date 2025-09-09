@@ -527,7 +527,7 @@ body {
 
 .map__button {
   padding: 3px 5px;
-  margin: 0 5px 0 0;
+  margin: 0 5px 3px 0;
   background-color: rgba(244, 207, 139, 0.2);
   color: #f4cf8b;
   font-size: 12px;
